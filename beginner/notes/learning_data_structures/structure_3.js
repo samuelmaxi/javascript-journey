@@ -5,7 +5,7 @@ map1.set('c', 3)
 
 
 
-console.log(map1.get('a'))
+console.log(map1.get('b'))
 
 
 console.log(map1.get('c'))
