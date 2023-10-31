@@ -11,7 +11,7 @@ contacts.set("Maria", {phone_numbre: "123456789", adress: "PE"});
 
 console.log(contacts.size);
 
-contacts.groupBy()
+contacts.groupBy("Samuel", "Maria")
 
 // contacts.clear()
 

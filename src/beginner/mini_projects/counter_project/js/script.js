@@ -1,5 +1,4 @@
-
-
+/* eslint-disable no-unused-vars */
 const btn = document.querySelector('#btn-counter')
 const number = document.querySelector('#number').innerHTML
 
