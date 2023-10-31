@@ -1,40 +1,26 @@
 // JSON
 
-let person;
+let person;   // DECLARATION VARIABLE
 
-const apiUrl = 'https://randomuser.me/api/';
+const apiUrl = 'https://randomuser.me/api/';   // API URL
 
-fetch(apiUrl)
-  .then(res => res.json())
-  .then(data => {
-    // console.log(data);
-    person = data
-  });
-
-async function fetchData() {
-  try {
-    const res = await fetch(apiUrl)
-    if (res.ok) {
-      person = await res.json();
-    } else {
-      console.error('error' + res.status)
+async function fetchData() {   // ASYNC FUNCTION TO CONSUMMER THE API
+  try {   // SCOPE OF ATTEMPT
+    const res = await fetch(apiUrl);   // DECLARATION RESPONSE VARIABLE
+    if (res.ok) {   // CONDITION
+      person = await res.json();   // ATTRIBUTING VALUE IN VARIABLE
+    } else {   // CONDITION FAILED
+      console.error('error' + res.status)   // ERROR VIEWER
     }
-  } catch (error) {
-    console.error('error' + error)
+  } catch (error) {   // FAILED ATTEMPT SCOPE
+    console.error('error' + error)   // ERROR VIEWER
   }
 }
 
-
-fetchData().then(() => {
-  // let newgender
-  console.log("Essa eh uma pessoa: " + person)
-  for (let i in person) {
-    console.log(person[i])
-
-    // if (i === 0) {
-    //   newgender = person[i]
-    // }
-    // console.log(newgender)
+fetchData().then(() => {   // CALL THE FUNCTION BY PASSING A SCOPE
+  console.log("Essa eh uma pessoa: " + person)    // VIEWER VARIABLE PERSON (TYPE = [OBJECT OBJECT])
+  for (let i in person) {   // GOING THROUGH ALL JSON ITEMS
+    console.log(person[i]);   // PROPS THE PERSON
   }
 })
 
