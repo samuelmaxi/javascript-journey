@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random</title>
+</head>
+
+<body>
+
+  <script>
+    const frutList = []
+    const dairyList = []
+    const frozenList = []
+    const candyList = []
+
+
+
+
+    let resp = prompt('Deseja adicionar uma comida na sua lista de compras (1 - sim | 2 - nao)')
+
+    while (resp == 1) {
+      let item = prompt('Qual comida você deseja inserir')
+      let categorie = prompt('Em qual categoria essa comida se encaixa')
+      switch (categorie) {
+        case 'frutas':
+          frutList.push(item)
+          break
+        case 'laticínios':
+          dairyList.push(item)
+          break
+        case 'congelados':
+          frozenList.push(item)
+          break
+        case 'doces':
+          candyList.push(item)
+          break
+        default:
+          console.log('Categoria nao encontreda')
+          break
+      }
+
+      resp = prompt('Deseja adicionar uma comida na sua lista de compras (1 - sim | 2 - nao)')
+
+      // TODO - FAZER A LISTA DE TODOS RENDERIZAR
+
+      const allList = [frutList, dairyList, frozenList, candyList]
+      if (resp == 2) {
+        alert(console.table(allList))
+        break
+      }
+    }
+  </script>
+</body>
+
+</html>

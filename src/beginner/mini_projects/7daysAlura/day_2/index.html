@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <main>
+    <form id="form">
+      <label for="name">What is your name? <input type="text" name="name" id="name"></label><br><br>
+      <label for="year">How old are you? <input type="text" name="year" id="year"></label><br><br>
+      <label for="l-programming">What is your favorite programming language? <input type="text" name="l-programming"
+          id="l-programming"></label><br><br>
+      <label for="option">Question? <input type="text" id="option" placeholder="Digite 'SIM' ou 'NAO'"></label>
+      <button type="button" onclick="Result()">Enviar</button>
+    </form>
+    <section>
+      <h1>Resultado</h1>
+      <p id="result-name">Name: </p>
+      <p id="result-year">Year: </p>
+      <p id="result-program-linguage">Linguage Programming: </p>
+      <p id="result-all"><strong></strong></p>
+      <p id="result-option"><strong></strong></p>
+    </section>
+  </main>
+</body>
+<script>
+
+  // TODO - TERMINAR DE ENVIAR DADOS DE UM INPUT PARA JS DEPOIS ENVIAR O VALOR PARA O HTML DE VOLTA
+  function Result() {
+    const name = document.querySelector('#name').value
+    const year = document.querySelector('#year').value
+    const lProgramming = document.querySelector('#l-programming').value
+    const question = document.querySelector('#option').value
+    console.log(lProgramming)
+    parent.document.querySelector('#result-name').innerHTML = 'Name: ' + name
+    parent.document.querySelector('#result-year').innerHTML = 'Year: ' + year
+    parent.document.querySelector('#result-program-linguage').innerHTML = 'Linguage Programming: ' + lProgramming
+    parent.document.querySelector('#result-all').innerHTML = `Olá ${name}, você tem ${year} anos e já está aprendendo ${lProgramming}!`
+
+    switch (question) {
+      case 'sim':
+        parent.document.querySelector('#result-option').innerHTML = 'Muito bom! Continue estudando e você terá muito sucesso.'
+        break
+
+      case 'nao':
+        parent.document.querySelector('#result-option').innerHTML = 'Muito Ahh que pena... Já tentou aprender outras linguagens?'
+        break
+
+      default:
+        parent.document.querySelector('#result-option').innerHTML = 'Responda "SIM" OU "NAO"'
+
+    }
+  }
+</script>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random</title>
+</head>
+
+<body>
+
+  <script>
+    let resp = prompt("qual sua resposta?")
+    // const respRight = "1"
+    const respRight = Math.floor((Math.random() * 1)+1)
+    let attempts = 2
+    while (attempts <=  3) {
+      if(attempts == 0){
+        alert(`Respostas erradas\nResposta certa: ${parseInt(respRight)}`)
+        break
+      }else{
+        if (resp == respRight) {
+          alert(`VOCE ACERTOU\nResposta certa:${parseInt(respRight)}`)
+          break
+        } else{
+          resp = prompt(`Tente novamente\nTotal de chances: ${attempts} `)
+        }
+      }
+
+      attempts--
+    }
+    console.log("acertou")
+    console.log(parseInt(respRight))
+  </script>
+</body>
+
+</html>
