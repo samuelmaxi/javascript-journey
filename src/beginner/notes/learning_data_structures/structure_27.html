@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 7 questao
+    function isPrimeNumber(numb){
+      
+        let restDividNumb = numb % numb == 0
+        let restDividOne = numb % 1 == 0
+        let isPar = numb % 2==0
+        let naturalNumber = numb > 1
+        let isParNotPrime = isPar && numb != 2
+        const isPrime = restDividNumb && restDividOne && naturalNumber && !isParNotPrime
+        if(isPrime){
+          console.log("numero primo: " + numb)
+          return
+        }else{
+          console.log("Nao eh primo: " + numb)
+        }
+    }
+    const number = Number(prompt("Digite um numero: "))
+
+    isPrimeNumber(number)
+  </script>
+</body>
+
+</html>

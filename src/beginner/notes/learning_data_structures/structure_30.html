@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 10 questao
+
+    function calcFuncion(arrayA, arrayB) {
+      if(arrayA.length !== arrayB.length || arrayA[0].length !== arrayB[0].length){
+        return "Nao tem a mesma dimensao"
+      }
+
+      const product = []
+
+      for(let i =0; i<arrayA.length;i++){
+        const row = []
+        for(let j =0; j<arrayA[i].length;j++){
+            row.push(arrayA[i][j] * arrayB[i][j])
+        }
+        product.push(row)
+      }
+      return product
+     
+    }
+
+    console.log(calcFuncion([
+      [1, 2, 3],
+      [3, 4, 5],
+      [6, 7, 8],
+    ],[
+      [1, 2, 3],
+      [3, 4, 5],
+      [6, 7, 8],
+    ]  ))
+
+  </script>
+</body>
+
+</html>

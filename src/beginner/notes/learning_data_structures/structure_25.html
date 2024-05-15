@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 5 questao
+    function getVetor(arr) {
+
+      const vetor = {
+        menor: arr[0],
+        maior: arr[0]
+      }
+
+      for(let i =0; i < arr.length; i++){
+        const current = arr[i]
+
+        if(vetor.maior < current){
+          vetor.maior = current
+        }
+
+        if(vetor.menor > current){
+          vetor.menor = current
+        }
+      }
+      return vetor
+    }
+
+    console.log(getVetor([500, 1, 5, 1000]))
+  </script>
+</body>
+
+</html>

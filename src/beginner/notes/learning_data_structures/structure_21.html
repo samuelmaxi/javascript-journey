@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    const arr = ["banana", "maca", "morango"]
+    let resp = prompt("digite um nome de fruta: ")
+  
+    // COM FOR E OPERADOR TERNARIO
+    let verify = false
+    for(let i=0; i< arr.length; i++){
+      let temp = arr[i]
+      verify = resp == temp ? console.log("sao igual") : arr.push(resp)
+      if (resp) break
+    }
+    console.log(arr)
+  </script>
+</body>
+</html>
