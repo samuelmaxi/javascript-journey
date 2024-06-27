@@ -1,4 +1,4 @@
-// Obejto
+// Objeto
 // estrutura
 
 const studant = {

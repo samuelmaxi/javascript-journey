@@ -1,4 +1,4 @@
-// Obejto
+// Objeto
 // acessando objetos
 
 const studant = {
